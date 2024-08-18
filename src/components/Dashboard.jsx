@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import MyBookings from "./MyBookings";
 import Widgets from "./Widgets";
 import Request from "./Request";
-import NearbyVehicles from "./NearByVehicles.jsx";
+import NearbyVehicles from "./NearbyVehicles";
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();

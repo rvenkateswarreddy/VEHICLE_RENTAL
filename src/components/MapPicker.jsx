@@ -31,7 +31,7 @@ const MapPicker = ({ onLocationChange }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyACUJddxmNoXmmkhGkrgJdtgCJQ8wU40cs">
+    <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={10}
