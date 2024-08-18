@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keyframes for slide-in animation from the top */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for slide-in animation from the side */
+@keyframes slideInFromSide {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Class for sliding in from the top */
+.letter {
+  display: inline-block;
+  animation: slideInFromTop 0.5s ease-out forwards;
+}
+
+/* Class for sliding in from the side with delay */
+.animate-slide-in {
+  animation: slideInFromSide 1s ease-out forwards;
+  animation-delay: 4s; /* Delay the animation by 4 seconds */
+}
