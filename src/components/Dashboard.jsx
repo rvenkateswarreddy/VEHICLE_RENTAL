@@ -6,10 +6,10 @@ import VehicleDetails from "../VehicleDetails";
 import Payment from "../Payment";
 import PaymentSuccess from "../PaymentSuccess";
 import { useNavigate } from "react-router-dom";
-import NearbyVehicles from "./NearByVehicles";
 import MyBookings from "./MyBookings";
 import Widgets from "./Widgets";
 import Request from "./Request";
+import NearbyVehicles from "./NearByVehicles.jsx";
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
