@@ -14,8 +14,8 @@ const Signup = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     const endpoint = isAdmin
-      ? "http://localhost:5000/api/admin/register"
-      : "http://localhost:5000/api/users/register";
+      ? "https://vehicle-backend-okmu.onrender.com/api/admin/register"
+      : "https://vehicle-backend-okmu.onrender.com/api/users/register";
 
     try {
       await axios.post(endpoint, {

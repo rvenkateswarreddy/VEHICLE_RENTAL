@@ -9,7 +9,7 @@ const ListBookings = () => {
     const fetchBookings = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/bookings/all/bookinglist"
+          "https://vehicle-backend-okmu.onrender.com/api/bookings/all/bookinglist"
         );
         setBookings(response.data);
       } catch (error) {

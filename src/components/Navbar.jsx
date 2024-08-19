@@ -46,28 +46,24 @@ const Navbar = ({ handleNavLinkClick }) => {
         >
           <Link
             to="/"
-            onClick={() => handleClick("Home")}
             className="text-lg font-bold text-gray-800 hover:text-primary transition-colors duration-300"
           >
             Home
           </Link>
           <Link
             to="/services"
-            onClick={() => handleClick("Services")}
             className="text-lg font-bold text-gray-800 hover:text-primary transition-colors duration-300"
           >
             Services
           </Link>
           <Link
             to="/about"
-            onClick={() => handleClick("About Us")}
             className="text-lg font-bold text-gray-800 hover:text-primary transition-colors duration-300"
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            onClick={() => handleClick("Contact")}
             className="text-lg font-bold text-gray-800 hover:text-primary transition-colors duration-300"
           >
             Contact

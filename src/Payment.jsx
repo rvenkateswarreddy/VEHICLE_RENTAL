@@ -22,7 +22,7 @@ const Payment = () => {
   const handlePayment = async () => {
     try {
       const paymentResponse = await axios.post(
-        "http://localhost:5000/api/payment/create",
+        "https://vehicle-backend-okmu.onrender.com/api/payment/create",
         {
           amount: total_amount,
         }
@@ -45,7 +45,7 @@ const Payment = () => {
 
           // Save booking and payment details in your backend
           await axios.post(
-            "http://localhost:5000/api/bookings/book",
+            "https://vehicle-backend-okmu.onrender.com/api/bookings/book",
             {
               vehicle_id,
               user_id: user?.userid,

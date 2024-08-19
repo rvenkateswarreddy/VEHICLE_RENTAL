@@ -58,7 +58,7 @@ const AddVehicleForm = () => {
     setLoading(true); // Set loading state to true
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/vehicles",
+        "https://vehicle-backend-okmu.onrender.com/api/vehicles",
         formData
       );
       console.log("Vehicle added:", response.data);

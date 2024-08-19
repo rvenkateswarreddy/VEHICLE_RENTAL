@@ -14,11 +14,11 @@ const NearbyVehicles = () => {
         navigator.geolocation.getCurrentPosition(
           async (position) => {
             const { latitude, longitude } = position.coords;
-            const maxDistance = 100;
+            const maxDistance = 1000;
 
             try {
               const response = await axios.get(
-                "http://localhost:5000/api/vehicles/near/nearby",
+                "https://vehicle-backend-okmu.onrender.com/api/vehicles/near/nearby",
                 {
                   params: {
                     lat: latitude,

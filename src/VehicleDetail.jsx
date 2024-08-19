@@ -12,7 +12,7 @@ const VehicleDetail = () => {
       const fetchVehicleDetails = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/vehicles/${vehicleId}`
+            `https://vehicle-backend-okmu.onrender.com/api/vehicles/${vehicleId}`
           );
           setVehicle(response.data.vehicle);
         } catch (error) {

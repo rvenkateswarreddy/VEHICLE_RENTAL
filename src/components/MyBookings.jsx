@@ -19,7 +19,7 @@ const MyBookings = () => {
       try {
         const userId = user?.userid;
         const response = await axios.get(
-          `http://localhost:5000/api/bookings/user/${userId}`
+          `https://vehicle-backend-okmu.onrender.com/api/bookings/user/${userId}`
         );
         setBookings(response.data.bookings);
         setFilteredBookings(response.data.bookings); // Set initial filtered bookings

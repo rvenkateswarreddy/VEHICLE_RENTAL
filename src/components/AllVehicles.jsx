@@ -17,7 +17,7 @@ const AllVehicles = () => {
   const fetchVehicles = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/vehicles/list/allvehicles"
+        "https://vehicle-backend-okmu.onrender.com/api/vehicles/list/allvehicles"
       );
       setVehicles(response.data);
     } catch (error) {
@@ -43,7 +43,9 @@ const AllVehicles = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/vehicles/${id}`);
+      await axios.delete(
+        `https://vehicle-backend-okmu.onrender.com/api/vehicles/${id}`
+      );
       fetchVehicles();
       toast.success("Vehicle deleted successfully");
     } catch (error) {

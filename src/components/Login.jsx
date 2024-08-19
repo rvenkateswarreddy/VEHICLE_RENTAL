@@ -13,8 +13,8 @@ const Login = () => {
     e.preventDefault();
     const role = isAdmin ? "admin" : "user";
     const endpoint = isAdmin
-      ? "http://localhost:5000/api/admin/login"
-      : "http://localhost:5000/api/users/login";
+      ? "https://vehicle-backend-okmu.onrender.com/api/admin/login"
+      : "https://vehicle-backend-okmu.onrender.com/api/users/login";
 
     try {
       const response = await axios.post(endpoint, {

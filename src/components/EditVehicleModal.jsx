@@ -25,7 +25,7 @@ const EditVehicleModal = ({ vehicle, onClose, onSave }) => {
   const handleSave = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/vehicles/${vehicle._id}`,
+        `https://vehicle-backend-okmu.onrender.com/api/vehicles/${vehicle._id}`,
         {
           ...formData,
           features: formData.features

@@ -25,14 +25,14 @@ const SearchBookings = () => {
       try {
         // Fetch users
         const usersResponse = await axios.get(
-          "http://localhost:5000/api/users/all/users"
+          "https://vehicle-backend-okmu.onrender.com/api/users/all/users"
         );
         setUsers(usersResponse.data);
 
         // Fetch bookings if a user is selected
         if (selectedUser) {
           const bookingsResponse = await axios.get(
-            `http://localhost:5000/api/bookings/user/${selectedUser}`
+            `https://vehicle-backend-okmu.onrender.com/api/bookings/user/${selectedUser}`
           );
           setBookings(bookingsResponse.data.bookings);
           setFilteredBookings(bookingsResponse.data.bookings); // Set initial filtered bookings

@@ -15,15 +15,18 @@ const VehicleRental = () => {
   useEffect(() => {
     const fetchVehicles = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/vehicles", {
-          params: {
-            type: vehicleType || undefined,
-            minPrice: minPrice || undefined,
-            maxPrice: maxPrice || undefined,
-            availability: availability || undefined,
-            search: searchQuery || undefined,
-          },
-        });
+        const response = await axios.get(
+          "https://vehicle-backend-okmu.onrender.com/api/vehicles",
+          {
+            params: {
+              type: vehicleType || undefined,
+              minPrice: minPrice || undefined,
+              maxPrice: maxPrice || undefined,
+              availability: availability || undefined,
+              search: searchQuery || undefined,
+            },
+          }
+        );
         setVehicles(response.data);
       } catch (error) {
         console.error("Error fetching vehicles:", error);

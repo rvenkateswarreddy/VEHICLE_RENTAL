@@ -13,7 +13,7 @@ const UsersList = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/users/all/users"
+          "https://vehicle-backend-okmu.onrender.com/api/users/all/users"
         );
         setUsers(response.data);
       } catch (error) {
