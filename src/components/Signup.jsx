@@ -6,13 +6,15 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [secretkey, setSecretkey] = useState(""); // New state for secret key
+  const [secretkey, setSecretkey] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true
     const endpoint = isAdmin
       ? "https://vehicle-backend-okmu.onrender.com/api/admin/register"
       : "https://vehicle-backend-okmu.onrender.com/api/users/register";
@@ -34,6 +36,8 @@ const Signup = () => {
       } else {
         setError("An unexpected error occurred");
       }
+    } finally {
+      setLoading(false); // Set loading to false
     }
   };
 
@@ -107,12 +111,13 @@ const Signup = () => {
         <button
           type="submit"
           className="w-full py-3 px-4 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-150"
+          disabled={loading} // Disable button when loading
         >
-          Register
+          {loading ? "Registering..." : "Register"} {/* Show loading text */}
         </button>
       </form>
       {error && (
-        <p className="mt-4 text-center text-red-600 font-medium">{error}</p>
+        <p className="mt-6 text-center text-red-600 font-medium">{error}</p>
       )}
     </div>
   );

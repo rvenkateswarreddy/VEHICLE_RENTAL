@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false); // Checkbox to toggle Admin/User
+  const [isAdmin, setIsAdmin] = useState(false);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true
     const role = isAdmin ? "admin" : "user";
     const endpoint = isAdmin
       ? "https://vehicle-backend-okmu.onrender.com/api/admin/login"
@@ -32,6 +34,8 @@ const Login = () => {
       }
     } catch (error) {
       setMessage(error.response.data.message || "Login failed");
+    } finally {
+      setLoading(false); // Set loading to false
     }
   };
 
@@ -83,8 +87,9 @@ const Login = () => {
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200"
+            disabled={loading} // Disable button when loading
           >
-            Login
+            {loading ? "Logging in..." : "Login"} {/* Show loading text */}
           </button>
         </form>
         {message && <p className="mt-6 text-red-600 text-center">{message}</p>}
