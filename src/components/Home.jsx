@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const images = [
     "https://www.hdwallpapers.in/download/white_car_in_white_background_hd_white_background-HD.jpg",
-    "https://cdn.cbeditz.com/cbeditz/large/11650100829v2fubl5wgy48heoicy33efr0byogn0nqexns51txzajegjl2ow72nkicuxzstebai4ojsxoemftzucdxwhwhf9zbr9dgc7fkooym.jpg",
+    "https://www.hdwallpapers.in/download/white_car_in_white_background_hd_white_background-HD.jpg",
     "https://img.freepik.com/premium-photo/scooter-with-white-background-high-quality-ultra-hd_889056-9969.jpg",
     "https://c4.wallpaperflare.com/wallpaper/299/365/301/2015-honda-pcx150-scooter-wallpaper-preview.jpg",
     "https://www.rushlane.com/wp-content/uploads/2020/12/seat-electric-scooter-125-launch-price-4.jpg",

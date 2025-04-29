@@ -18,7 +18,7 @@ const NearbyVehicles = () => {
 
             try {
               const response = await axios.get(
-                "https://vehicle-backend-okmu.onrender.com/api/vehicles/near/nearby",
+                "http://localhost:5000/api/vehicles/near/nearby",
                 {
                   params: {
                     lat: latitude,
